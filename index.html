@@ -42,7 +42,191 @@
         </dd>
       </dl>
     </section>
+    <section class="makeup_101">
+        <h1 class="makup_title">MAKE UP 101</h1>
+        <div class="makeup_content">
+            <ul>
+                <li>
+                    <div class="card-content">
+                        <img src="./assets/images/cil_badge.png" alt="">
+                    </div>
+                    <div class="text-block">
+                        <h2> 1-on-1 Master Class</h2>
+                        <p>Customize your learning experience to excel in your chosen areas, all at your own pace.</p>
+                    </div>
+                    <button class="arrow-button">></button>
+                </li>
+                <li>
+                    <div class="card-content">
+                        <img src="./assets/images/cil_badge.png" alt="">
+                    </div>
+                    <div class="text-block">
+                        <h2>Profesional 1-day Workshop</h2>
+                        <p>Discover popular and practical techniques to apply right away!</p>
+                    </div>
+                    <button class="arrow-button">></button>
+                </li>
+                <li>
+                    <div class="card-content">
+                        <img src="./assets/images/cil_badge.png" alt="">
+                    </div>
+                    <div class="text-block">
+                        <h2>Self-Makeup Beginner Class</h2>
+                        <p>Learn the basics, practice doing your own makeup and make new friends in the process!</p>
+                    </div>
+                    <button class="arrow-button">></button>
+                </li>
+            </ul>
+            <button class="all_classes">All Classes</button>
+        </div>
+        <div class="makeup_img">
+            <img class="image_makeup_101" src="./assets/images/image 122.png" alt="">
+        </div>
+    </section>
+    <section class="diy_beauty">
+        <h1 class="diy_title">DIY Beauty Corner</h1>
+        <div class="diy_gallery">
+            <div class="video_box">
+                <video src="./assets/videos/video_example.mp4" controls poster="./assets/images/img_video1.jpg" type="video/mp4"></video>
+                <div class="overlay">
+                    <p>✨Make up✨ Be a queen in...</p>
+                    <button class="play_button">▶</button>
+                </div>
+            </div>
+            <div class="video_box">
+                <video src="./assets/videos/video_example.mp4" controls poster="./assets/images/img_video2.jpg" type="video/mp4"></video>
+                <div class="overlay">
+                <p>Produce a beautiful bride ✨...</p>
+                <button class="play_button">▶</button>
+      </div>
+            </div>
+            <div class="video_box">
+                <video src="./assets/videos/video_example.mp4" controls poster="./assets/images/img_video3.jpg" type="video/mp4"></video>
+                <div class="overlay">
+                <p>How to do stunning hair in 3...</p>
+                <button class="play_button">▶</button>
+      </div>
+            </div>
+        </div>
+        <div class="button_tips">
+            <button class="view_more">More Beauty Tips</button>
+        </div>
+    </section>
+    <section class="lets_talk">
+        <h1>LET'S TALK</h1>
+        <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
+        <form action="index.html">
+            <h2 class="form_title">Services</h2>
+            <div class="divider"></div>
+            <fieldset>
+            <legend>Event Type</legend>
+            <div class="event_type">
+                <ul>
+                    <li>
+                        <label class="radio_option">
+                        Wedding
+                        <input type="radio" name="event_type" value="wedding">
+                        <span class="circle"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio_option">
+                        Party
+                        <input type="radio" name="event_type" value="party">
+                        <span class="circle"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="radio_option">
+                        Photoshoot
+                        <input type="radio" name="event_type" value="photoshoot">
+                        <span class="circle"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            </fieldset>
+            <div class="eventDate_container">
+                <fieldset>
+                    <legend>Event Date</legend>
+                    <div class="field_date">
+                    <input type="date" name="eventDate" id="eventDate" min="2024-01-01" max="2025-12-31">
+                    <input type="checkbox" name="notDecidedDate" value="notDecidedDate" id="notDecidedDate">
+                    <label for="notDecidedDate">Not decided</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Event Time</legend>
+                    <div class="field_time">
+                        <select name="eventTime" id="eventDate">
+                            <option value="full_day">Full day</option>
+                            <option value="mid_day">Mid day</option>
+                            <option value="morning">Morning</option>
+                            <option value="afternoon">Afternoon</option>
+                        </select>
+                        <input type="checkbox" name="notDecidedDate" value="notDecidedDate" id="notDecidedDate">
+                        <label for="notDecidedDate">Not decided</label>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset class="contact_services_section">
+                <div class="field-block">
+                <legend>Name</legend>
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+                </div>
+                <div class="contact_methods">
+                    <legend>Contact</legend>
+                    <div>
+                        <input type="radio" value="call" name="contact_type" id="call">
+                        <label for="call">Call</label>
+                    </div>
+                    <div class="phone_input hidden">
+                        <select name="country-code">
+                            <option value="+1">+1</option>
+                            <option value="+52">+52</option>
+                            <option value="+44">+44</option>
+                        </select>
+                        <input type="number" name="phone_call" id="phone_call" placeholder="Your mobile number" maxlength="10" pattern="[0-9]{10}">
+                    </div>
+                    <div>
+                        <input type="radio" value="whatsapp" name="contact_type" id="whatsapp">
+                        <label for="whatsapp">WhatsApp</label>
+                    </div>
+                    <div class="phone_input hidden">
+                        <select name="country-code">
+                            <option value="+1">+1</option>
+                            <option value="+52">+52</option>
+                            <option value="+44">+44</option>
+                        </select>
+                        <input type="number" name="whatsapp" id="whatsapp" placeholder="Your WhatsApp number">
+                    </div>
+                    <div>
+                        <input type="radio" value="sms" name="contact_type" id="sms">
+                        <label for="sms">SMS</label>
+                    </div>
+                    <div class="phone_input hidden">
+                        <select name="country-code">
+                            <option value="+1">+1</option>
+                            <option value="+52">+52</option>
+                            <option value="+44">+44</option>
+                        </select>
+                        <input type="number" name="sms" id="sms" placeholder="Your mobile number for SMS">
+                    </div>
+                    <div>
+                        <input type="radio" value="email" name="contact_type" id="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="email_input hidden">
+                        <input type="email" name="email" id="email" title="Only gmail accounts are allowed" pattern="^[a-zA-Z0-9_.+]+@gmail\.com$" placeholder="Your email" required>
+                    </div>
+
+                </div>
+            </fieldset>
+            <div class="button_submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
   </main>
-    
 </body>
 </html>
