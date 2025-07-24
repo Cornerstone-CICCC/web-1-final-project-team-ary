@@ -1,0 +1,98 @@
+
+.footer_main{
+    padding: 60px 40px 30px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #7d6b6b;
+    text-align: center;
+}
+
+.footer_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.branding .logo{
+    width: 80px;
+    margin-bottom: 8px;
+}
+
+.branding h2{
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.branding p{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.social_icons_footer{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.social_icons_footer img{
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social_icons_footer a:hover img{
+    transform: scale(1.2);
+}
+
+.footer_nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #7d6b6b;
+    border-bottom: 1px solid #7d6b6b;
+    a{
+        position: relative;
+        text-decoration: none;
+        color: #7d6b6b;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    a:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #7d6b6b;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    a:hover{
+        color: #462c2c;
+    }
+
+    a:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.copyright_footer{
+    font-size: 0.8rem;
+    color: #a18f8f;
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
