@@ -27,5 +27,7 @@ hairstyle_button.addEventListener("click",function(){
 
 button_view_more.addEventListener("click",function(){
     extras.forEach(card => card.style.display = "block");
-    button_view_more.style.display = 'none';
+    if(window.innerWidth < 768){
+        button_view_more.style.display = 'none';
+    }
 })
