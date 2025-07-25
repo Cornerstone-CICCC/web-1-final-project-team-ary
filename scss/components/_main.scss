@@ -1,0 +1,591 @@
+/*Make up 101 Section*/
+.makup_title{
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: #7d6b6b;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.makeup_101{
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    align-items: start;
+    gap: 60px;
+    padding: 0 0 40px 0;
+    background-color: #f7e7e7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    li{
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+.makeup_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin-left: 300px;
+}
+
+
+.card-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1;
+
+    img{
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+}
+
+.text-block{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h2{
+        font-size: 2rem;
+        color: #7d6b6b;
+        font-family: 'Cormorant Garamond', serif;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
+
+    p{
+        font-size: 0.95rem;
+        font-family: 'Segoe UI', sans-serif;
+        color: #333;
+        margin-top: 0;
+        margin-right: 50px;
+    }
+}
+
+.arrow-button{
+    color: #7d6b6b;
+    border: none;
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    align-self: center;
+    align-self: center;
+    margin-left: 40px;
+}
+
+.arrow-button:hover{
+    background: none;
+    border: 1px solid black;
+}
+
+
+.all_classes{
+    align-self: flex-start;
+    margin-top: 32px;
+    padding: 8px 32px;
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    background: transparent;
+    color: #7d6b6b;
+    border: 1px solid #7d6b6b;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    padding: 16px 32px;
+}
+
+.all_classes:hover{
+    background-color: #7d6b6b;
+    color: #fff;
+}
+
+.makeup_img{
+    display: flex;
+    align-items: start;
+    width: 400px;
+    margin-right: 300px;
+}
+
+.image_makeup_101{
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    border-radius: 12px;
+    object-fit: cover;
+    border:2px solid #e5d2d2;
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/*DIY Section */
+.diy_beauty{
+    padding: 60px 40px;
+    background-color: transparent;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+}
+
+.diy_gallery{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+}
+
+.video_box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.diy_title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  color: #7d6b6b;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+
+  p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    text-align: left;
+  }
+}
+
+.play_button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.play_button:hover {
+  color: #7d6b6b;
+}
+
+.button_tips{
+    text-align: center;
+}
+
+.view_more{
+  padding: 14px 32px;
+  font-size: 1rem;
+  background: transparent;
+  color: #7d6b6b;
+  border: 1px solid #7d6b6b;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: 'Cormorant Garamond', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view_more:hover{
+    background-color: #7d6b6b;
+    color: #fff;
+}
+
+/*Let's talk Section*/
+
+.lets_talk{
+    padding: 60px 40px;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1{
+        font-size: 2rem;
+        letter-spacing: 0.08em;
+        color: #7d6b6b;
+        margin-bottom: 16px;
+    }
+
+    p{
+        font-size: 1rem;
+        color: #4e3e3e;
+        margin-bottom: 32px;
+        max-width: 600px;
+    }
+
+    form{
+        background-color: #f7e7e7;
+        padding: 40px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        width: 100%;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    fieldset{
+        border: none;
+        margin-bottom: 24px;
+    }
+
+    legend{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #7d6b6b;
+        margin-bottom: 16px;
+    }
+
+    label{
+        font-weight: 500;
+        color: #333;
+        margin-right: 12px;
+    }
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/*Form*/
+
+.form_title{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: #7d6b6b;
+    margin-bottom: 8px;
+}
+
+.divider {
+  width: 100%;
+  max-width: 580px;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto 24px auto;
+  border-radius: 1px;
+}
+
+
+/*Event type section*/
+
+.event_type{
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;    
+    }
+
+    li{
+        position: relative;
+        background-color: white;
+        border: 2px solid #e0cfcf;
+        padding: 5px;
+        flex: 1;
+        display: flex;
+        gap: 20px;
+    }
+
+    label{
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1rem;
+        color: #7d6b6b;
+        cursor: pointer;
+        gap: 12px;
+    }
+
+}
+
+.radio_group {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.radio_option {
+  display: flex;
+  justify-content: space-between!important;
+  align-items: center;
+  gap: 12px;
+  padding: 2px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #7d6b6b;
+  position: relative;
+}
+
+
+.radio_option input[type="radio"] {
+  display: none;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7d6b6b;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  transition: background 0.3s ease;
+}
+
+.radio_option input[type="radio"]:checked + .circle::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: white;
+  background-color: #7d6b6b;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Event date section*/
+
+.eventDate_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-direction: row;
+    margin-bottom: 24px;
+
+    legend{
+        margin: 0;
+    }
+
+    fieldset{
+        width: 100%;
+        border: none;
+    }
+}
+
+.field_date{
+    gap: 12px;
+    margin-top: 4px;
+    input[type="date"] {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    font-family: 'Segoe UI', sans-serif;
+    }
+
+    input[type="checkbox"]{
+        margin-top: 8px;
+    }
+
+}
+
+.field_time select{
+    margin-top: 4px;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+}
+
+.field_time  input[type="checkbox"]{
+        margin-top: 8px;
+}
+
+/*Name on the form*/
+
+.contact_services_section{
+    padding: 0;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.field_block {
+  font-family: 'Cormorant Garamond', serif;
+  margin-right: 100px;
+}
+
+.field-block input[type="text"]{
+    width: 100%;
+    max-width: 560px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    font-family: 'Segoe UI', sans-serif;
+    padding-right: 10px;
+}
+
+/*Contact section*/
+
+.contact_services_section{
+    max-width: 580px;
+}
+
+
+
+.contact_methods{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact_methods input[type="number"],
+.contact_methods select{
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+.contact_methods input[type="number"]{
+    min-width: 450px;
+}
+
+.phone_input{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #d5c4c4;
+    overflow: hidden;
+}
+
+.phone_input select {
+  border: none;
+  background-color: transparent;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #7d6b6b;
+  font-family: 'Segoe UI', sans-serif;
+  border-right: 1px solid #d5c4c4;
+}
+
+.phone_input input[type="number"] {
+  flex: 1;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.phone_input input:focus {
+  outline: none;
+}
+
+.email_input{
+    max-width: 552px;
+}
+
+.email_input input[type="email"]{
+    padding: 10px 14px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid #d5c4c4;
+    width: 100%;
+}
+
+.button_submit {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.button_submit button {
+ padding: 14px 32px;
+  font-size: 1rem;
+  background: transparent;
+  color: #7d6b6b;
+  border: 1px solid #7d6b6b;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: 'Cormorant Garamond', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button_submit button:hover {
+  background-color: #7d6b6b;
+  color: #fff;
+}
+
+//keep invisible some elements before to check some of the radio buttons
+.hidden{
+    display: none;
+}
