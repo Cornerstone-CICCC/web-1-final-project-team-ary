@@ -128,3 +128,35 @@
     color: #fff;
 }
 
+/*Responsive footer*/
+
+@media (max-width:768px) {
+
+    .gallery{
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
+    .description_work{
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    .switch_titles{
+        font-size: 42px;
+        flex-wrap: wrap;
+    }
+
+    .switch_button{
+        font-size: 24px;
+    }
+
+    .button_view_more {
+    font-size: 16px;
+    padding: 12px 20px;
+    }
+
+    .extra_work{
+        display: none;
+    }
+}
