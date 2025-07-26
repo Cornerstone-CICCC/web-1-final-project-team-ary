@@ -12,8 +12,13 @@ makeup_button.addEventListener("click",function(){
         makeup_section.classList.remove("display_work");
         hairstyle_button.classList.remove("switch_clicked");
         hairstyle_section.classList.add("display_work");
-        extras.forEach(card => card.style.display = "none");
-        button_view_more.style.display = 'block';
+        if(window.innerWidth < 768){
+            extras.forEach(card => card.style.display = "none");
+            button_view_more.style.display = 'block';
+        }else{
+            extras.forEach(card => card.style.display = "block")
+        }
+        
 })
 
 hairstyle_button.addEventListener("click",function(){
@@ -21,8 +26,12 @@ hairstyle_button.addEventListener("click",function(){
         makeup_section.classList.add("display_work");
         hairstyle_button.classList.add("switch_clicked");
         hairstyle_section.classList.remove("display_work");
-        extras.forEach(card => card.style.display = "none");
-        button_view_more.style.display = 'block';
+        if(window.innerWidth < 768 ){
+            extras.forEach(card => card.style.display = "none");
+            button_view_more.style.display = 'block';
+        }else{
+            extras.forEach(card => card.style.display = "block")
+        }
 })
 
 button_view_more.addEventListener("click",function(){
