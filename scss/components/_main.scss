@@ -1,3 +1,87 @@
+.makeup_and_hairstyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: #f8f4f0;
+  font-family: "Baskervville", serif;
+  flex-wrap: wrap;
+ 
+}
+
+#make_styles{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: #f8f4f0;
+  font-family: "Baskervville", serif;
+  flex-wrap: wrap;
+}
+
+.makeup_and_hairstyle_content {
+  flex: 1 1 400px;
+  text-align: left;
+  color: #725A58;
+}
+
+.title_make{
+  
+  font-size: 68px;
+  margin-bottom: 16px;
+  font-family: "Baskervville", serif;
+}
+
+.line_divider {
+  width: 60px;
+  height: 3px;
+  background-color: #a77c6c;
+  margin-bottom: 24px;
+}
+
+.makeup_and_hairstyle_content p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.makeup_and_hairstyle_content button {
+  background-color: transparent;
+  color: #a77c6c;
+  border: 2px solid #a77c6c;
+  padding: 12px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.makeup_and_hairstyle_content button:hover {
+  background-color: #a77c6c;
+  color: white;
+}
+
+.images_events {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.images_events img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.images_events img:hover {
+  transform: scale(1.05);
+}
+
+
 /*Make up 101 Section*/
 .makup_title{
     grid-column: 1 / -1;
@@ -177,9 +261,9 @@
 
      ul li{
         display: flex;
-        flex-direction: column; /* Elementos apilados verticalmente */
-        align-items: center;    /* Centrado horizontal */
-        text-align: center;     /* Centra el texto */
+        flex-direction: column; 
+        align-items: center;   
+        text-align: center;   
         gap: 16px;
     }
   }
