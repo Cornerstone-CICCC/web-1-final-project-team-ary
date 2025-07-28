@@ -1,35 +1,29 @@
+/*makeup&hairstyle*/
+
 .makeup_and_hairstyle {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding: 60px 80px;
   background-color: #f8f4f0;
   font-family: "Baskervville", serif;
-  flex-wrap: wrap;
  
 }
 
-#make_styles{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 80px;
-  background-color: #f8f4f0;
-  font-family: "Baskervville", serif;
-  flex-wrap: wrap;
-}
-
 .makeup_and_hairstyle_content {
-  flex: 1 1 400px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #725A58;
 }
 
 .title_make{
-  
+  display: block;
+  max-width: 500px;
   font-size: 68px;
+  padding-top: 60px;
   margin-bottom: 16px;
   font-family: "Baskervville", serif;
 }
@@ -37,11 +31,12 @@
 .line_divider {
   width: 60px;
   height: 3px;
-  background-color: #a77c6c;
+  background-color: #e3b6b1;
   margin-bottom: 24px;
 }
 
 .makeup_and_hairstyle_content p {
+  max-width: 400px;
   font-size: 18px;
   margin-bottom: 24px;
   line-height: 1.6;
@@ -52,6 +47,7 @@
   color: #a77c6c;
   border: 2px solid #a77c6c;
   padding: 12px 28px;
+  margin-bottom: 20px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -65,14 +61,58 @@
 .images_events {
   flex: 1 1 400px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
 }
 
+.event_box {
+  position: relative;
+}
+
+.overlay_box img {
+  width: 100%;
+  display: block;
+}
+
+.overlay_event {
+  display: block;
+  position: absolute;
+  bottom: 16px;
+  left: -40px;
+  font-size: 40px;
+  font-family: "Baskervville", serif;
+  color: #FAE9E7;
+  z-index: 100;
+
+  span{
+    color: #B99692;
+  }
+}
+
+.img_dimens{
+  width: 200px;
+}
+
+.img_central{
+  width: 300px;
+}
+
+.img_sides{
+  left: -26px;
+}
+
+.images_events{
+  flex-direction: row;
+  gap: 50px;
+}
+
 .images_events img {
-  width: 180px;
-  border-radius: 12px;
+  width: 100%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
@@ -80,6 +120,103 @@
 .images_events img:hover {
   transform: scale(1.05);
 }
+
+.image_wrap{
+  position: relative;
+  display: inline-block;
+}
+
+.image_wrap::before {
+  content: "";
+  position: absolute;
+  top: -20px;      
+  left: 20px;     
+  width: 100%;
+  height: 100%;
+  background-color: #f8f4f0;  
+  border: 2px solid #a77c6c;
+  z-index: 0;
+}
+
+.image_wrap img {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/*Responsive makeup&hairstyle*/
+@media (max-width: 768px) {
+  .makeup_and_hairstyle {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 32px;
+  }
+
+  .title_make {
+    font-size: 50px;
+    padding-top: 40px;
+    max-width: 300px;
+  }
+
+  .line_divider {
+    margin: 0 auto 24px auto;
+  }
+
+  .makeup_and_hairstyle_content p {
+    max-width: 100%;
+    font-size: 20px;
+    padding: 0 12px;
+  }
+
+  .makeup_and_hairstyle_content button {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+
+  .images_events {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .event_box{
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .img_dimens{
+    max-width: 527px;
+  }
+
+  .image_wrap{
+    width: 100%;
+  }
+  
+  .image_wrap::before{
+    content: none;
+    display: none;
+  }
+
+  .overlay_event {
+    color: #F8F6F4;
+    bottom: 12px;
+    left: 0;
+    font-size: 86px;
+    text-align: center;
+    width: 100%;
+
+    span{
+      color: #F8F6F4;
+    }
+  }
+}
+
 
 
 /*Make up 101 Section*/
@@ -428,11 +565,11 @@
 @media (max-width: 768px) {
   .diy_gallery {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 0 40px;
     scroll-padding: 40px;
-    gap: 32px;
+    gap: 1rem;
     scroll-behavior: smooth;
     width: 100%!important;
   }
@@ -445,6 +582,7 @@
     flex:0 0 auto;
     max-width: 100%;
     min-width: 300px;
+    position: relative;
     height: auto;
     scroll-snap-align: start;    
   }
@@ -455,6 +593,11 @@
   }
 
   .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
     justify-content: flex-end;
   }
 
@@ -568,7 +711,14 @@
 /*Event type section*/
 
 .event_type{
+
+      display: flex;
+      flex-direction: row;
+
     ul{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
         list-style: none;
         padding: 0;
         gap: 10px;
