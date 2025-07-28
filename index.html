@@ -121,8 +121,21 @@
         <button class="slide-btn" id="slide-next"><img src="/assets/images/top/work-arrow-right.svg" alt=""></button>
       </div>
     </section>
+    <section class="makeup_and_hairstyle" id="make_styles">
+        <div class="makeup_and_hairstyle_content">
+            <h1 class="title_make">MAKEUP & HAIRSTYLE</h1>
+            <div class="line_divider"></div>
+            <p>We offer fully customizable plan to meet your unique requirements.</p>
+            <button>Get a Quote</button>
+        </div>
+        <div class="images_events">
+            <img src="./assets/images/main/makeup&hair1.png" alt="party">
+            <img src="./assets/images/main/makeup&hair2.png" alt="wedding">
+            <img src="./assets/images/main/makeup&hair3.png" alt="photoshoot">
+        </div>
+    </section>
     <section class="makeup_101" id="classes">
-        <h1 class="makup_title">MAKE UP 101</h1>
+        <h1 class="makup_title">MAKE UP lOl</h1>
         <div class="makeup_content">
             <ul>
                 <li>
@@ -130,7 +143,7 @@
                         <img src="./assets/images/cil_badge.png" alt="">
                     </div>
                     <div class="text-block">
-                        <h2> 1-on-1 Master Class</h2>
+                        <h2> l-on-l Master Class</h2>
                         <p>Customize your learning experience to excel in your chosen areas, all at your own pace.</p>
                     </div>
                     <button class="arrow-button">></button>
@@ -140,7 +153,7 @@
                         <img src="./assets/images/cil_badge.png" alt="">
                     </div>
                     <div class="text-block">
-                        <h2>Profesional 1-day Workshop</h2>
+                        <h2>Profesional l-day Workshop</h2>
                         <p>Discover popular and practical techniques to apply right away!</p>
                     </div>
                     <button class="arrow-button">></button>
@@ -177,14 +190,14 @@
                 <div class="overlay">
                 <p>Produce a beautiful bride ✨...</p>
                 <button class="play_button">▶</button>
-      </div>
+            </div>
             </div>
             <div class="video_box">
                 <video src="./assets/videos/video_example.mp4" controls poster="./assets/images/img_video3.jpg" type="video/mp4"></video>
                 <div class="overlay">
                 <p>How to do stunning hair in 3...</p>
                 <button class="play_button">▶</button>
-      </div>
+            </div>
             </div>
         </div>
         <div class="button_tips">
@@ -202,21 +215,21 @@
             <div class="event_type">
                 <ul>
                     <li>
-                        <label class="radio_option">
+                        <label class="radio_option" style="width: 100%;">
                         Wedding
                         <input type="radio" name="event_type" value="wedding">
                         <span class="circle"></span>
                         </label>
                     </li>
                     <li>
-                        <label class="radio_option">
+                        <label class="radio_option"style="width: 100%;">
                         Party
                         <input type="radio" name="event_type" value="party">
                         <span class="circle"></span>
                         </label>
                     </li>
                     <li>
-                        <label class="radio_option">
+                        <label class="radio_option" style="width: 100%;">
                         Photoshoot
                         <input type="radio" name="event_type" value="photoshoot">
                         <span class="circle"></span>
@@ -237,14 +250,14 @@
                 <fieldset>
                     <legend>Event Time</legend>
                     <div class="field_time">
-                        <select name="eventTime" id="eventDate">
+                        <select name="eventTime" id="eventDateTime">
                             <option value="full_day">Full day</option>
                             <option value="mid_day">Mid day</option>
                             <option value="morning">Morning</option>
                             <option value="afternoon">Afternoon</option>
                         </select>
-                        <input type="checkbox" name="notDecidedDate" value="notDecidedDate" id="notDecidedDate">
-                        <label for="notDecidedDate">Not decided</label>
+                        <input type="checkbox" name="notDecidedDate" value="notDecidedDate" id="notDecidedTime">
+                        <label for="notDecidedTime">Not decided</label>
                     </div>
                 </fieldset>
             </div>
@@ -296,13 +309,13 @@
                         <label for="email">Email</label>
                     </div>
                     <div class="email_input hidden">
-                        <input type="email" name="email" id="email" title="Only gmail accounts are allowed" pattern="^[a-zA-Z0-9_.+]+@gmail\.com$" placeholder="Your email" required>
+                        <input type="email" name="email" id="email" title="Only gmail accounts are allowed" pattern="^[a-zA-Z0-9_.+]+@gmail\.com$" placeholder="Your email">
                     </div>
 
                 </div>
             </fieldset>
             <div class="button_submit">
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit_btn">Submit</button>
             </div>
         </form>
     </section>
@@ -335,6 +348,7 @@
   </footer>
   
   <script src="./js_files/header.js"></script>
+  <script src="/js_files/main.js"></script>
   <script>
     const slides = document.querySelector('.slide-box');
     const slide = document.querySelectorAll('.slide-item');

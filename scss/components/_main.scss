@@ -1,12 +1,97 @@
+.makeup_and_hairstyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: #f8f4f0;
+  font-family: "Baskervville", serif;
+  flex-wrap: wrap;
+ 
+}
+
+#make_styles{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: #f8f4f0;
+  font-family: "Baskervville", serif;
+  flex-wrap: wrap;
+}
+
+.makeup_and_hairstyle_content {
+  flex: 1 1 400px;
+  text-align: left;
+  color: #725A58;
+}
+
+.title_make{
+  
+  font-size: 68px;
+  margin-bottom: 16px;
+  font-family: "Baskervville", serif;
+}
+
+.line_divider {
+  width: 60px;
+  height: 3px;
+  background-color: #a77c6c;
+  margin-bottom: 24px;
+}
+
+.makeup_and_hairstyle_content p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.makeup_and_hairstyle_content button {
+  background-color: transparent;
+  color: #a77c6c;
+  border: 2px solid #a77c6c;
+  padding: 12px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.makeup_and_hairstyle_content button:hover {
+  background-color: #a77c6c;
+  color: white;
+}
+
+.images_events {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.images_events img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.images_events img:hover {
+  transform: scale(1.05);
+}
+
+
 /*Make up 101 Section*/
 .makup_title{
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 3rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    font-family: "Baskervville", serif;
     color: #7d6b6b;
     letter-spacing: 0.15em;
     margin-bottom: 8px;
+    margin-top: 40px;
     width: 100%;
 }
 
@@ -17,7 +102,7 @@
     gap: 60px;
     padding: 0 0 40px 0;
     background-color: #f7e7e7;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Baskervville", serif;
     margin-left: 40px;
     margin-right: 40px;
 
@@ -70,21 +155,27 @@
     gap: 8px;
 
     h2{
-        font-size: 2rem;
-        color: #7d6b6b;
-        font-family: 'Cormorant Garamond', serif;
+        font-size:32px;
+        color:#725A58;;
+        font-family: "Baskervville", serif;
         left: 0;
         top: 0;
         margin: 0;
+        padding-left: 30px;
     }
 
     p{
         font-size: 0.95rem;
-        font-family: 'Segoe UI', sans-serif;
-        color: #333;
+        font-family: "Lato", sans-serif;
+        color: black;
         margin-top: 0;
         margin-right: 50px;
+        padding-left: 0;
     }
+}
+
+.makeup_content ul li:nth-of-type(2) .text-block {
+  transform: translateX(-45px);
 }
 
 .arrow-button{
@@ -112,7 +203,7 @@
     margin-top: 32px;
     padding: 8px 32px;
     font-size: 1rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Baskervville", serif;
     font-weight: 500;
     background: transparent;
     color: #7d6b6b;
@@ -140,13 +231,87 @@
     width: 100%;
     height: 100%;
     max-width: 340px;
-    border-radius: 12px;
+    outline: 2px solid white;
+    outline-offset: -15px;
     object-fit: cover;
-    border:2px solid #e5d2d2;
-    padding: 8px;
-    background-color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+
+
+/*Responsive menu*/
+/*Responsive Makeup 101*/
+@media (max-width: 768px) {
+  .makeup_101 {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 40px;
+    margin: 0;
+  }
+
+   .makup_title {
+    font-size: 60px;
+    margin-top: 24px;
+  }
+
+  .makeup_content {
+    margin-left: 0;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+
+     ul li{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;   
+        text-align: center;   
+        gap: 16px;
+    }
+  }
+
+  .makeup_content ul li:nth-of-type(2) .text-block {
+  transform: translateX(-4px);
+}
+
+  .makeup_img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .image_makeup_101 {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  } 
+
+  .text-block h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .text-block p {
+    font-size: 20px;
+    margin-right: 0;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  .arrow-button {
+    margin-left: 20px;
+  }
+
+  .all_classes {
+    align-self: center;
+    width: 500px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 16px;
+    overflow: hidden;
+  }
+}
+
+
 
 /*DIY Section */
 .diy_beauty{
@@ -258,28 +423,91 @@
     color: #fff;
 }
 
+
+/*Responsive DIY Section*/
+@media (max-width: 768px) {
+  .diy_gallery {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 0 40px;
+    scroll-padding: 40px;
+    gap: 32px;
+    scroll-behavior: smooth;
+    width: 100%!important;
+  }
+
+  .diy_gallery::-webkit-scrollbar{
+    display: none;
+  }
+
+  .video_box {
+    flex:0 0 auto;
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    scroll-snap-align: start;    
+  }
+
+  .video_box video {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .overlay {
+    justify-content: flex-end;
+  }
+
+  .overlay p {
+    font-size: 0.9rem;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .play_button {
+    top: 12px;
+    right: 12px;
+    width: 26px;
+    height: 26px;
+    font-size: 0.9rem;
+  }
+
+  .diy_title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .view_more {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+
 /*Let's talk Section*/
 
 .lets_talk{
     padding: 60px 40px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Baskervville", serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
     h1{
-        font-size: 2rem;
+        font-size: 68px;
         letter-spacing: 0.08em;
-        color: #7d6b6b;
+        color: #725A58;
         margin-bottom: 16px;
     }
 
     p{
         font-size: 1rem;
-        color: #4e3e3e;
+        color: black;
         margin-bottom: 32px;
-        max-width: 600px;
+        max-width: 400px;
+        font-family: "Lato", sans-serif;
     }
 
     form{
@@ -299,7 +527,7 @@
     legend{
         font-size: 1.2rem;
         font-weight: bold;
-        color: #7d6b6b;
+        color: #725A58;
         margin-bottom: 16px;
     }
 
@@ -322,8 +550,8 @@
 .form_title{
     text-align: center;
     font-size: 2rem;
-    font-family: 'Cormorant Garamond', serif;
-    color: #7d6b6b;
+    font-family: "Baskervville", serif;
+    color: #725A58;
     margin-bottom: 8px;
 }
 
@@ -343,31 +571,29 @@
     ul{
         list-style: none;
         padding: 0;
-        display: flex;
         gap: 10px;
-        justify-content: space-between;
         padding: 0;
         margin: 0;    
     }
 
     li{
-        position: relative;
         background-color: white;
         border: 2px solid #e0cfcf;
         padding: 5px;
-        flex: 1;
         display: flex;
         gap: 20px;
+        width: 100%;
     }
 
     label{
-        display: inline-flex;
-        align-items: center;
-        font-family: 'Cormorant Garamond', serif;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Baskervville", serif;
         font-size: 1rem;
-        color: #7d6b6b;
+        color: #725A58;
         cursor: pointer;
         gap: 12px;
+        width: 100%;
     }
 
 }
@@ -382,7 +608,7 @@
 .radio_option {
   display: flex;
   justify-content: space-between!important;
-  align-items: center;
+  width: 500px;
   gap: 12px;
   padding: 2px;
   cursor: pointer;
@@ -399,7 +625,7 @@
 .circle {
   width: 20px;
   height: 20px;
-  border: 2px solid #7d6b6b;
+  border: 2px solid #e3b6b1;
   border-radius: 50%;
   position: relative;
   background-color: white;
@@ -414,7 +640,7 @@
   transform: translate(-50%, -50%);
   font-size: 0.8rem;
   color: white;
-  background-color: #7d6b6b;
+  background-color: #e3b6b1;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -450,11 +676,13 @@
     padding: 8px 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    font-family: 'Segoe UI', sans-serif;
+    background-color: #FBFAFA;
+    font-family: "Baskervville", serif;
     }
 
     input[type="checkbox"]{
         margin-top: 8px;
+        all: revert;
     }
 
 }
@@ -464,11 +692,22 @@
     width: 100%;
     padding: 8px 12px;
     font-size: 1rem;
+    border: 1px solid #ccc;
+    background-color: #FBFAFA;
+
 }
+
+.field_time select:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
 
 .field_time  input[type="checkbox"]{
         margin-top: 8px;
+        background-color: #FBFAFA;
+        all: revert;
 }
+
 
 /*Name on the form*/
 
@@ -481,7 +720,7 @@
 }
 
 .field_block {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Baskervville", serif;
   margin-right: 100px;
 }
 
@@ -491,8 +730,9 @@
     padding: 10px 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Baskervville", serif;
     padding-right: 10px;
+    background-color: #FBFAFA;
 }
 
 /*Contact section*/
@@ -509,11 +749,16 @@
     gap: 8px;
 }
 
+.contact_methods input[type="radio"]{
+    all: revert;
+    accent-color: #725A58;
+}
+
 .contact_methods input[type="number"],
 .contact_methods select{
     padding: 10px 12px;
     font-size: 1rem;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Baskervville", serif;
 }
 .contact_methods input[type="number"]{
     min-width: 450px;
@@ -532,8 +777,8 @@
   background-color: transparent;
   padding: 10px 14px;
   font-size: 1rem;
-  color: #7d6b6b;
-  font-family: 'Segoe UI', sans-serif;
+  color: #725A58;
+  font-family: "Baskervville", serif;
   border-right: 1px solid #d5c4c4;
 }
 
@@ -542,7 +787,7 @@
   border: none;
   padding: 10px 14px;
   font-size: 1rem;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Baskervville", serif;
   color: #333;
 }
 
@@ -571,21 +816,88 @@
  padding: 14px 32px;
   font-size: 1rem;
   background: transparent;
-  color: #7d6b6b;
-  border: 1px solid #7d6b6b;
+  color: #725A58;
+  border: 1px solid #725A58;
   border-radius: 0;
   box-shadow: none;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Baskervville", serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button_submit button:hover {
-  background-color: #7d6b6b;
+  background-color: #725A58;
   color: #fff;
 }
 
 //keep invisible some elements before to check some of the radio buttons
 .hidden{
     display: none;
+}
+/*Responsive form*/
+@media (max-width: 768px) {
+  .lets_talk {
+    padding:0;
+  }
+
+  .lets_talk h1 {
+    font-size: 60px;
+  }
+
+  .lets_talk p {
+    width: 450px;
+    font-size: 20px;
+  }
+
+  .event_type ul {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 20px;
+  }
+
+  .event_type li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .event_type label{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .eventDate_container {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+  }
+
+  .contact_methods input[type="number"] {
+    min-width: 100%;
+  }
+
+  .form_title {
+    font-size: 30px;
+  }
+
+  .field_block {
+    margin-right: 0;
+    font-size: 20px;
+  }
+  .radio_option{
+    width: 500px!important;
+  }
+
+  .radio_group {
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  .button_submit {
+    margin-top: 24px;
+  }
+
+  .button_submit button {
+    width: 100%;
+  }
 }
