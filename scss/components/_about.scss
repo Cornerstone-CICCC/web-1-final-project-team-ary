@@ -1,14 +1,7 @@
-// About Page Styles
-.about-page {
-  min-height: 100vh;
-  background-color: #fff;
-}
-
 // Hero Section
 .about-hero {
-  padding: 120px 0 80px;
+  padding-bottom: 70px;
   text-align: center;
-  background-color: #F8F6F4;
 
   .about-hero-content {
     max-width: 1200px;
@@ -21,7 +14,7 @@
     font-size: 2.5rem;
     font-weight: 400;
     color: #E3B6B1;
-    margin: 0 0 10px 0;
+    margin-bottom: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -29,7 +22,7 @@
   .about-subtitle {
     font-family: 'Baskervville', serif;
     font-size: 4rem;
-    font-weight: 500;
+    font-weight: 400;
     color: #725A58;
     margin: 0;
     letter-spacing: 1px;
@@ -37,21 +30,25 @@
   }
 
   @media (max-width: 768px) {
-    padding: 100px 0 60px;
+    padding: 40px 0;
 
     .about-title {
-      font-size: 50px;
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
 
     .about-subtitle {
-      font-size: 70px;
+      font-size: 33px;
+      line-height: 1;
+      letter-spacing: .12em;
     }
   }
 }
 
 // About Content Section
 .about-content {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: #FAE9E7;
 
   .about-content-inner {
@@ -59,8 +56,8 @@
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
     align-items: center;
   }
 
@@ -70,9 +67,6 @@
     img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border: 3px solid #fff;
     }
   }
 
@@ -80,7 +74,7 @@
     .about-founder-title {
       font-family: 'Baskervville', serif;
       font-size: 2.2rem;
-      font-weight: 600;
+      font-weight: 400;
       color: #725A58;
       margin: 0 0 30px 0;
       line-height: 1.3;
@@ -101,17 +95,13 @@
       .btn {
         display: inline-block;
         padding: 15px 40px;
-        background-color: transparent;
         color: #5E4A49;
-        border: 2px solid #5E4A49;
+        border: 1px solid #5E4A49;
         font-family: 'Baskervville', serif;
         font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: all 0.3s ease;
-        cursor: pointer;
 
         &:hover {
           background-color: #5E4A49;
@@ -124,12 +114,13 @@
   }
 
   @media (max-width: 768px) {
-    padding: 60px 0;
+    padding: 0 0 40px;
 
     .about-content-inner {
       width: 100%;
       grid-template-columns: 1fr;
       gap: 40px;
+      padding: 0;
     }
 
     .about-image img{
@@ -137,14 +128,10 @@
     }
 
     .about-text {
+      padding: 0 17px;
       .about-founder-title {
-        font-size: 55px;
+        font-size: 32px;
         margin-bottom: 20px;
-      }
-
-      .about-description,
-      .about-experience {
-        font-size: 28px;
       }
 
       .about-cta {
@@ -158,7 +145,7 @@
 
 // Brands Section
 .about-brands {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: #F8F6F4;
 
   .about-brands-content {
@@ -173,9 +160,7 @@
     font-size: 2.5rem;
     font-weight: 400;
     color: #725A58;
-    margin: 0 0 60px 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin-bottom: 45px;
   }
 
   .brands-grid {
@@ -183,6 +168,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     align-items: center;
+    width: 80%;
+    max-width: 910px;
+    margin: 0 auto;
   }
 
   .brand-item {
@@ -214,13 +202,14 @@
     padding: 60px 0;
 
     .brands-title {
-      font-size: 45px;
-      margin-bottom: 40px;
+      font-size: 32px;
+      margin-bottom: 24px;
     }
 
     .brands-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
+      width: 100%;
     }
 
     .brand-item {
@@ -230,7 +219,6 @@
 
   @media (max-width: 480px) {
     .brands-grid {
-      grid-template-columns: 1fr;
       gap: 20px;
     }
   }
@@ -239,16 +227,11 @@
 // Responsive adjustments for mobile
 @media (max-width: 768px) {
   .about-page {
-    .about-hero {
-      padding: 80px 0 40px;
-    }
-
-    .about-content {
-      padding: 40px 0;
-    }
-
     .about-brands {
       padding: 40px 0;
+    }
+    .about-brands-content{
+      padding: 0 40px;
     }
   }
 } 
