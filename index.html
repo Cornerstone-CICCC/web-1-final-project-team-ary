@@ -382,13 +382,17 @@
     }
 
     prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slide.length) % slide.length;
-      updateSlidePosition();
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlidePosition();
+      }
     });
 
     nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slide.length;
-      updateSlidePosition();
+      if (currentIndex < slide.length - 1) {
+        currentIndex++;
+        updateSlidePosition();
+      }
     });
   </script>
 </body>
