@@ -65,7 +65,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
@@ -104,11 +104,6 @@
 
 .img_sides{
   left: -26px;
-}
-
-.images_events{
-  flex-direction: row;
-  gap: 50px;
 }
 
 .images_events img {
@@ -374,6 +369,16 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+.arrow_content{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.arrow-text {
+  display: none;
+}
+
 
 /*Responsive menu*/
 /*Responsive Makeup 101*/
@@ -388,6 +393,8 @@
    .makup_title {
     font-size: 60px;
     margin-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .makeup_content {
@@ -434,17 +441,29 @@
     max-width: 400px;
   }
 
+  .arrow_content{
+    gap: 0;
+  }
+
   .arrow-button {
-    margin-left: 20px;
+    margin-left: -4px;
   }
 
   .all_classes {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
     align-self: center;
-    width: 500px;
-    padding-left: 50px;
-    padding-right: 50px;
     font-size: 16px;
     overflow: hidden;
+  }
+
+  .arrow-text {
+    display: inline;
+    font-size: 1rem;
+    color: #725A58;
+    font-family: "Baskervville", serif;
   }
 }
 
