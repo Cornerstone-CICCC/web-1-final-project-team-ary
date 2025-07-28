@@ -100,15 +100,25 @@
         <li><img src="./assets/images/top/work04.jpg" alt=""></li>
       </ul>
       <div class="top-work-slide">
-        <div class="slide-item">
-          <div class="img"><img src="/assets/images/top/work-mark.svg" alt=""></div>
-          <p class="ttl">Carla is the best! She made me the night's brightest star! She stayed with me the whole  wedding ensuring I always looked and felt wonderful!! </p>
-          <div class="slide-bottom">
-            <button class="slide-btn" id="slide-prev"><img src="/assets/images/top/work-arrow-left.svg" alt=""></button>
+        <div class="slide-box">
+          <div class="slide-item">
+            <div class="img"><img src="/assets/images/top/work-mark.svg" alt=""></div>
+            <p class="ttl">Carla Beauty's party makeup service was amazing! The makeup lasted all night, keeping me flawless until the end. Thank you, Carla for an unforgettable experience!</p>
             <div class="name"><img src="/assets/images/top/work-name01.svg" alt=""></div>
-            <button class="slide-btn" id="slide-next"><img src="/assets/images/top/work-arrow-right.svg" alt=""></button>
+          </div>
+          <div class="slide-item">
+            <div class="img"><img src="/assets/images/top/work-mark.svg" alt=""></div>
+            <p class="ttl">Carla is the best! She made me the night's brightest star! She stayed with me the whole  wedding ensuring I always looked and felt wonderful!! </p>
+            <div class="name"><img src="/assets/images/top/work-name02.svg" alt=""></div>
+          </div>
+          <div class="slide-item">
+            <div class="img"><img src="/assets/images/top/work-mark.svg" alt=""></div>
+            <p class="ttl">Carla Beauty's makeup for my photoshoot was outstanding! Their expertise and attention to detail made me look perfect in every shot. Highly recommend!</p>
+            <div class="name"><img src="/assets/images/top/work-name03.svg" alt=""></div>
           </div>
         </div>
+        <button class="slide-btn" id="slide-prev"><img src="/assets/images/top/work-arrow-left.svg" alt=""></button>
+        <button class="slide-btn" id="slide-next"><img src="/assets/images/top/work-arrow-right.svg" alt=""></button>
       </div>
     </section>
     <section class="makeup_101" id="classes">
@@ -325,5 +335,27 @@
   </footer>
   
   <script src="./js_files/header.js"></script>
+  <script>
+    const slides = document.querySelector('.slide-box');
+    const slide = document.querySelectorAll('.slide-item');
+    const prevBtn = document.querySelector('#slide-prev');
+    const nextBtn = document.querySelector('#slide-next');
+
+    let currentIndex = 0;
+
+    function updateSlidePosition() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+      updateSlidePosition();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slide.length;
+      updateSlidePosition();
+    });
+  </script>
 </body>
 </html>
