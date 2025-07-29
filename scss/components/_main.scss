@@ -999,8 +999,8 @@
 /*Responsive form*/
 @media (max-width: 768px) {
   .lets_talk {
-    width: 100vw;
-    padding:15px;
+    margin-top: 45px;
+    padding: 0;
   }
 
   .lets_talk h1 {
@@ -1009,6 +1009,10 @@
 
   .lets_talk p {
     padding: 0 16px;
+  }
+
+  .lets_talk form{
+    padding: 40px 16px;
   }
 
   .event_type ul {
