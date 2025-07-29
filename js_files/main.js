@@ -18,12 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.querySelectorAll('input[name="contact_type"]').forEach(radio => {
   radio.addEventListener('change', function () {
-    // Ocultar todos los bloques
     document.querySelectorAll('.phone_input, .email_input').forEach(div => {
       div.classList.add('hidden');
     });
 
-    // Determinar cuál mostrar según el radio seleccionado
     let selectedValue = this.value;
 
     if (selectedValue === 'call') {
@@ -39,79 +37,76 @@ document.querySelectorAll('input[name="contact_type"]').forEach(radio => {
 });
 
 
-document.getElementById('submit_btn').addEventListener('click', function (event) {
-  event.preventDefault(); // Evita que se envíe automáticamente
+function validateForm(event) {
+  event.preventDefault();
+  let valid = true;
+  const eventType = document.querySelector('input[name="event_type"]:checked');
+  if (!eventType) {
+    alert("Select some kind of event");
+    valid = false;
+  }
 
-  // Obtiene el valor seleccionado
+  const dateInput = document.getElementById("eventDate");
+  const dateCheckbox = document.getElementById("notDecidedDate");
+  if (!dateInput.value && !dateCheckbox.checked) {
+    alert("Choice one date or checked 'No decided'");
+    valid = false;
+  }
+
+  const timeSelect = document.getElementById("eventDateTime");
+  const timeCheckbox = document.getElementById("notDecidedTime");
+  if (!timeSelect.value && !timeCheckbox.checked) {
+      alert("Choice one hr or checked 'No decided'");
+    valid = false;
+  }
+
+  const nameInput = document.getElementById("name");
+  if (!nameInput.value.trim()) {
+    alert("Add Name");
+    valid = false;
+  }
+
   const contactType = document.querySelector('input[name="contact_type"]:checked');
   if (!contactType) {
-    alert('Por favor seleccioná un método de contacto');
-    return;
+    alert("Select a contact method");
+    valid = false;
   }
 
-  let valid = true;
-  let data = {};
 
-  // Validación y asignación según el tipo
-  if (contactType.value === 'call') {
-    const phone = document.getElementById('phone_call');
-    if (!phone.value.match(/^\d{10}$/)) {
-      alert('Número de teléfono inválido para llamada');
-      valid = false;
-    } else {
-      data.call = phone.value;
+  if (contactType) {
+    let contactField;
+    switch (contactType.value) {
+      case "call":
+        contactField = document.getElementById("phone_call");
+        break;
+      case "whatsapp":
+        contactField = document.getElementById("input_whatsapp");
+        break;
+      case "sms":
+        contactField = document.getElementById("input_sms");
+        break;
+      case "email":
+        contactField = document.getElementById("input_email");
+        break;
     }
-  } else if (contactType.value === 'whatsapp') {
-    const phone = document.getElementById('whatsapp');
-    if (!phone.value.match(/^\d{10}$/)) {
-      alert('Número de WhatsApp inválido');
+
+    if (!contactField || !contactField.value.trim()) {
+      alert("Complete contact information");
       valid = false;
-    } else {
-      data.whatsapp = phone.value;
-    }
-  } else if (contactType.value === 'sms') {
-    const phone = document.getElementById('sms');
-    if (!phone.value.match(/^\d{10}$/)) {
-      alert('Número de SMS inválido');
-      valid = false;
-    } else {
-      data.sms = phone.value;
-    }
-  } else if (contactType.value === 'email') {
-    const email = document.getElementById('email');
-    const pattern = /^[a-zA-Z0-9_.+]+@gmail\.com$/;
-    if (!pattern.test(email.value)) {
-      alert('Solo se permiten cuentas Gmail válidas');
-      valid = false;
-    } else {
-      data.email = email.value;
     }
   }
 
-  // Si pasa la validación, “envía” y limpia
   if (valid) {
-    console.log('Datos enviados:', data); // Simula envío
-    alert('¡Formulario enviado con éxito!');
-
-    // Limpiar campos
-    document.querySelectorAll('input, select').forEach(el => {
-      if (el.type === 'radio') {
-        el.checked = false;
-      } else {
-        el.value = '';
-      }
-    });
-
-    // Oculta los bloques de nuevo
-    document.querySelectorAll('.phone_input, .email_input').forEach(div => {
-      div.classList.add('hidden');
-    });
+    alert("Form sent 🎉");
+    document.querySelector("form").submit();
   }
-});
+}
 
-// Checkbox de la fecha
-  const dateCheckbox = document.getElementById('notDecidedDate');
-  const dateInput = document.getElementById('eventDate');
+document.getElementById("submit_btn").addEventListener("click", validateForm);
+
+
+const dateCheckbox = document.getElementById('notDecidedDate');
+const dateInput = document.getElementById('eventDate');
 
   if(dateCheckbox){
     dateCheckbox.addEventListener('change', function () {
@@ -120,8 +115,6 @@ document.getElementById('submit_btn').addEventListener('click', function (event)
   });
   }
   
-
-  // Checkbox del horario
   const timeCheckbox = document.getElementById('notDecidedTime');
   const timeSelect = document.getElementById('eventDateTime');
 
