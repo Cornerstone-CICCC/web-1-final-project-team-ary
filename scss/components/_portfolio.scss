@@ -132,6 +132,10 @@
 
 @media (max-width:768px) {
 
+    .title_work{
+        font-size: 40px;
+    }
+
     .gallery{
         grid-template-columns: 1fr;
         padding: 40px 30px;
@@ -140,6 +144,7 @@
     .description_work{
         max-width: 300px;
         font-size: 16px;
+        margin-bottom: 40px;
     }
 
     .switch_titles{
