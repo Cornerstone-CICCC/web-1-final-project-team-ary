@@ -122,6 +122,24 @@ const dateInput = document.getElementById('eventDate');
     timeSelect.disabled = this.checked;
       console.log(this.checked)
   });
+
+  const carrusel = document.querySelector('diy_gallery');
+  const videoBoxes = carrusel.querySelectorAll('.video_box');
+
+  const setMargins = () => {
+    const carruselWidth = carrusel.offsetWidth;
+    const videoWidth = videoBoxes[0].offsetWidth;
+    const sideMargin = (carruselWidth - videoWidth) / 2;
+
+    videoBoxes[0].style.marginLeft = `${sideMargin}px`;
+    videoBoxes[videoBoxes.length - 1].style.marginRight = `${sideMargin}px`;
+  };
+
+  window.addEventListener('load', setMargins);
+  window.addEventListener('resize', setMargins);
+
+
+
 });
 
   
